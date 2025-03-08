@@ -1,20 +1,19 @@
 #include <stdio.h>
 #include <locale.h>
 
-int main()
-{
+#define TAM 10
+int main(){
     setlocale(LC_ALL, "Portuguese");
-    int vetor [4];
-    vetor[0] = 10;
-    vetor[1] = 46;
-    vetor[2] = 41;
-    vetor[3] = 60;
-    vetor[4] = 200;
+    int numeros[TAM], i;
 
-    printf("Valores do vetor:\n");
-    for (int i = 0; i < 6; i++)
-    {
-        printf("vetor[%d] = %d\n", i, vetor[i]);
+    for (i = 0; i < TAM; i++) {
+        printf("Posição %d do vetor: ", i);
+        scanf("%d", &numeros[i]);
     }
+        printf("\n\n");
+
+        for (i = 0; i < TAM; i++) {
+            printf("%d\t", numeros[i]);
+        }
     return 0;
 }
